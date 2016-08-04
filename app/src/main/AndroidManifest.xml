@@ -7,6 +7,16 @@
         android:label="隐藏GMS提示框"
         android:supportsRtl="true">
 
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="不再显示需要GMS服务的提示框" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="30+" />
+
     </application>
 
 </manifest>
