@@ -18,7 +18,6 @@ import static de.robv.android.xposed.XposedHelpers.findAndHookMethod;
 public class MainHook implements IXposedHookLoadPackage {
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam loadPackageParam) throws Throwable {
-        if (!loadPackageParam.packageName.equals("net.wargaming.wot.blitz")) return;
 
         findAndHookMethod("com.google.android.gms.common.GooglePlayServicesUtil", loadPackageParam.classLoader,
                 "getErrorDialog", int.class, Activity.class, int.class, OnCancelListener.class, new XC_MethodReplacement() {
